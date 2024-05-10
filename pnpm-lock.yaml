@@ -52,7 +52,7 @@ importers:
         specifier: ^5.2.6
         version: 5.2.6(@types/node@20.11.30)
 
-  examples/core/express:
+  examples/server/express:
     dependencies:
       express:
         specifier: ^4.19.2
@@ -65,7 +65,7 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3
 
-  examples/core/koa:
+  examples/server/koa:
     dependencies:
       koa:
         specifier: ^2.15.2
@@ -97,17 +97,13 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3
 
-  packages/client:
-    dependencies:
-      '@sse-sync/core':
-        specifier: workspace:*
-        version: link:../core
+  packages/client: {}
 
-  packages/core:
+  packages/server:
     dependencies:
       better-sse:
-        specifier: ^0.11.0
-        version: 0.11.0
+        specifier: ^0.12.0
+        version: 0.12.0
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -1292,9 +1288,9 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: false
 
-  /better-sse@0.11.0:
-    resolution: {integrity: sha512-xY5Nmn9XyO5PiMw4//C+mNCUknaueugBqXMoMdEp2s9oNDVI4Vu6nhjduxA6yOxJVm/O6u3YC3FbLMHEvTzk3Q==}
-    engines: {node: '>=12', pnpm: '>=6'}
+  /better-sse@0.12.0:
+    resolution: {integrity: sha512-B3ukLpBrOfjOjt5XWWB3zl3kIiTfeExQVMu1fu9/826ZRuVrFXbV5WJ75eV+PmWtwEBzOpBjPzkwosl6OyoTPw==}
+    engines: {node: '>=12', pnpm: '>=9'}
     dev: false
 
   /body-parser@1.20.2:
